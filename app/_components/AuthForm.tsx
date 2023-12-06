@@ -1,15 +1,15 @@
 'use client';
 
-import { useCallback, useState } from "react";
+import { useCallback, useState } from 'react';
 import { 
     FieldValues, 
     SubmitHandler, 
-    useForm } from "react-hook-form";
+    useForm } from 'react-hook-form';
 import { BsGithub, BsGoogle } from 'react-icons/bs'
 
-import Input from "@/app/_components/Inputs/input";
-import Button from "@/app/_components/Buttons/Button";
-import AuthSocialButton from "@/app/_components/Buttons/AuthSocialButton";
+import Input from '@/app/_components/Inputs/input';
+import Button from '@/app/_components/Buttons/Button';
+import AuthSocialButton from '@/app/_components/Buttons/AuthSocialButton';
 
 
 type variant = 'LOGIN' | 'REGISTER';
@@ -187,7 +187,7 @@ const AuthForm = () => {
                     text-gray-500
                 ">
                     <div>
-                        {variant === 'LOGIN' ? 'New to Messenger?' : "Already have and account?"}
+                        {variant === 'LOGIN' ? 'New to Messenger?' : 'Already have and account?'}
                     </div>
 
                     <div 
