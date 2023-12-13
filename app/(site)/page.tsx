@@ -30,7 +30,7 @@ export default function Home() {
           text-gray-900
         "
         >
-          Login or Continue as Guest.
+          Sign in to your account
         </h1>
       </div>
       <AuthForm/>
