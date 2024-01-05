@@ -14,7 +14,7 @@ const useConversation = () => {
 
 
     const isOpen = useMemo(() => {
-        !!conversationId
+        return !!conversationId
     }, [conversationId])
 
     return useMemo(() => ({

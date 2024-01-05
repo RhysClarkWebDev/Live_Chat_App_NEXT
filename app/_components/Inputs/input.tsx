@@ -8,11 +8,12 @@ import {
 interface InputProps {
     label: string,
     id: string,
-    type: string,
-    required: boolean,
+    type?: string,
+    required?: boolean,
     register: UseFormRegister<FieldValues>,
     errors: FieldErrors,
-    disabled: boolean
+    disabled?: boolean,
+    placeholder?: string,
 }
 
 const Input: React.FC<InputProps> = ({
@@ -22,7 +23,8 @@ const Input: React.FC<InputProps> = ({
     required,
     register,
     errors,
-    disabled
+    disabled,
+    placeholder
 }) => {
     return (
         <div>
@@ -45,6 +47,7 @@ const Input: React.FC<InputProps> = ({
                     autoComplete={id}
                     disabled={disabled}
                     {...register(id, { required })}
+                    placeholder={placeholder}
                     className={clsx(`
                         form-input
                         block
@@ -62,8 +65,8 @@ const Input: React.FC<InputProps> = ({
                         focus:ring-sky-600
                         sm:text-sm
                         sm:leading-6`,
-                        errors[id] && "focus:ring-rose-500",
-                        disabled && "opacity-50 cursor-default"
+                        errors[id] && 'focus:ring-rose-500',
+                        disabled && 'opacity-50 cursor-default'
                     )}
                 />
             </div>
